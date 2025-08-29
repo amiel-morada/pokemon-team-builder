@@ -1,0 +1,141 @@
+:root { --bg:#f6f8fb; --card:#fff; --accent:#2a75bb; }
+body {
+	margin: 0;
+	font-family: 'Press Start 2P', 'VT323', 'Courier New', monospace;
+	background: #d7f7d7;
+	color: #222;
+	image-rendering: pixelated;
+}
+.app-root { max-width:1100px; margin:20px auto; padding:12px; }
+.app-header {
+	text-align: center;
+	font-size: 2rem;
+	font-family: 'Press Start 2P', 'VT323', monospace;
+	color: #2a5c2a;
+	text-shadow: 2px 2px 0 #fff, 4px 4px 0 #b2d8b2;
+	margin-bottom: 16px;
+}
+.app-main { display:flex; gap:16px; align-items:flex-start; }
+.pokedex { flex:1; }
+.teamview {
+	width: 320px;
+	background: #e0ffe0;
+	padding: 12px;
+	border-radius: 0;
+	border: 4px solid #2a5c2a;
+	box-shadow: 0 0 0 8px #b2d8b2, 0 2px 6px rgba(0,0,0,0.12);
+}
+.grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+	gap: 12px;
+}
+.card {
+	background: #fff;
+	padding: 8px;
+	border-radius: 0;
+	border: 3px solid #2a5c2a;
+	text-align: center;
+	box-shadow: 0 0 0 4px #b2d8b2, 0 1px 4px rgba(0,0,0,0.12);
+	font-family: 'VT323', 'Press Start 2P', monospace;
+	font-size: 1.1rem;
+}
+.sprite {
+	width: 72px;
+	height: 72px;
+	image-rendering: pixelated;
+	border: 2px solid #2a5c2a;
+	background: #e0ffe0;
+}
+.card-actions { margin-top:8px; }
+.card button {
+	padding: 6px 10px;
+	border-radius: 0;
+	border: 2px solid #2a5c2a;
+	background: #b2d8b2;
+	color: #222;
+	font-family: 'Press Start 2P', 'VT323', monospace;
+	font-size: 0.9rem;
+	cursor: pointer;
+	box-shadow: 2px 2px 0 #fff, 4px 4px 0 #2a5c2a;
+	transition: background 0.2s, box-shadow 0.2s;
+}
+.card button:hover {
+	background: #2a5c2a;
+	color: #fff;
+	box-shadow: 2px 2px 0 #b2d8b2, 4px 4px 0 #fff;
+}
+.card button[disabled] {
+	opacity: 0.55;
+	cursor: not-allowed;
+	background: #e0ffe0;
+	color: #7d8590;
+}
+.team-grid {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 8px;
+}
+.team-slot {
+	background: #d7f7d7;
+	min-height: 84px;
+	border-radius: 0;
+	border: 2px solid #2a5c2a;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	cursor: pointer;
+	font-family: 'VT323', 'Press Start 2P', monospace;
+	font-size: 1rem;
+}
+.team-slot img {
+	width: 48px;
+	height: 48px;
+	image-rendering: pixelated;
+	border: 1px solid #2a5c2a;
+	background: #e0ffe0;
+}
+.empty {
+	color: #7d8590;
+	font-family: 'VT323', monospace;
+}
+
+.remove-all-btn {
+	margin-top: 10px;
+	padding: 6px 10px;
+	font-family: 'Press Start 2P', 'VT323', monospace;
+	font-size: 0.9rem;
+	border: 2px solid #2a5c2a;
+	background: #b2d8b2;
+	color: #222;
+	border-radius: 0;
+	box-shadow: 2px 2px 0 #fff, 4px 4px 0 #2a5c2a;
+	cursor: pointer;
+	opacity: 1;
+	transition: background 0.2s, box-shadow 0.2s;
+}
+.remove-all-btn:disabled {
+	opacity: 0.55;
+	cursor: not-allowed;
+	background: #e0ffe0;
+	color: #7d8590;
+}
+
+.searchbar {
+	margin-bottom: 10px;
+}
+.searchbar input {
+	width: 100%;
+	padding: 8px;
+	border-radius: 0;
+	border: 2px solid #2a5c2a;
+	background: #e0ffe0;
+	font-family: 'VT323', monospace;
+	font-size: 1rem;
+	color: #222;
+}
+/* Import pixel fonts */
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap');
+
+
